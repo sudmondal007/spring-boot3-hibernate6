@@ -1,1 +1,1 @@
-# spring-boot3-web-mvc-jsp
+# spring-boot3-hibernate6
