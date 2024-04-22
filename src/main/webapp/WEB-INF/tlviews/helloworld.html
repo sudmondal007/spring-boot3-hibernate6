@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout.html}">
+<head>
+    <title>Sample Title</title>
+</head>
+<body>
+<div layout:fragment="content" class="">
+    <table>
+	    <thead>
+	        <tr>
+	            <th> Students </th>
+	        </tr>
+	    </thead>
+	    <tbody>
+		<tr th:if="${studentList.empty}">
+	            <td colspan="2"> No Data Available </td>
+	        </tr>
+	        <tr th:each="student : ${studentList}">
+	            <td><span th:text="${student.firstName}"> </span></td>
+	            <td><span th:text="${student.firstName}"> </span></td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>
+</body>
+</html>

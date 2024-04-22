@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+<!-- <link rel="stylesheet" href="../css/bootstrap-theme.min.css"> -->
+<!-- <script src="../js/bootstrap.min.js"></script> -->
+</head>
+<body>
+	<div th:replace="fragments/header.html :: header"></div>
+
+	<div layout:fragment="content"></div>
+	
+	<div th:replace="fragments/footer.html :: footer"></div>
+</body>
+</html>
