@@ -16,10 +16,13 @@ public class HelloControllerThymeleaf {
 	@Autowired
 	private SampleDAO sampleDAO;
 
-	@GetMapping("/hellothymeleaf")
+	@GetMapping("/viewstudents")
 	public String getPermissionList(Model model) {
 		List<Student> studentList = sampleDAO.findAll();
-		model.addAttribute("studentList", studentList);
+		if(CollectionUtils.isNotEmpty(studentList)) {
+			Set<Student> studentSet = new HashSet<Student>(studentList);
+			model.addAttribute("studentList", studentSet);
+		}
 		return "helloworld.html";
 	}
 }
